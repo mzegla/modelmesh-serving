@@ -111,6 +111,8 @@ if [[ $DOCKER_TARGET == 'runtime' ]]; then
 
   docker_args+=("--build-arg=COMMIT_SHA=${git_commit_sha}")
   docker_args+=("--build-arg=IMAGE_VERSION=${DOCKER_TAG}")
+  docker_args+=("--build-arg=http_proxy=$http_proxy") 
+  docker_args+=("--build-arg=https_proxy=$https_proxy")
 fi
 
 $ENGINE build . \
