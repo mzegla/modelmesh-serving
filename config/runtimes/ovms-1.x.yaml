@@ -24,6 +24,10 @@ spec:
       autoSelect: true
     - name: onnx
       version: "1"
+    - name: mediapipe_graph
+      version: "1"
+      autoSelect: true
+
 
   protocolVersions:
     - grpc-v1

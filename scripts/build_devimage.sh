@@ -37,7 +37,7 @@ else
   mkdir -p $CONTEXT_DIR
   cp ${DEV_DEPS} ${CONTEXT_DIR}
   echo "Building dev image ${FULL_IMAGE_NAME}"
-  $ENGINE build -f ${CONTEXT_DIR}/Dockerfile.develop -t ${FULL_IMAGE_NAME} ${CONTEXT_DIR}
+  $ENGINE build -f ${CONTEXT_DIR}/Dockerfile.develop -t ${FULL_IMAGE_NAME} ${CONTEXT_DIR} --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy
 fi
 echo -n "${FULL_IMAGE_NAME}" > .develop_image_name
 
